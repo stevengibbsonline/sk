@@ -16,9 +16,6 @@ const config = {
 		paths: {
 			relative: false
 		},
-		files: {
-			serviceWorker: 'src/customServiceWorker.js'
-		},
 		serviceWorker: {
 			register: true
 		}
