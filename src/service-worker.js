@@ -9,6 +9,11 @@ const ASSETS = [
 	...files  // everything in `static`
 ];
 
+// Test if non-assets are in files
+if(files.includes('_headers')) {
+	console.log('the static _headers was included in the files array, and needs to be filtered out before we call cache.addAll')
+}
+
 self.addEventListener('install', (event) => {
 	// Create a new cache and add all files to it
 	async function addFilesToCache() {
